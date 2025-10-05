@@ -1,4 +1,7 @@
 import { Inngest } from "inngest";
 
-// Create a client to send and receive events
-export const inngest = new Inngest({ id: "gocart-commerce" });
+const inngest = new Inngest({
+    id: "gocart-eccommerce",
+    eventKey: process.env.INNGEST_EVENT_KEY,
+    apiUrl: process.env.INNGEST_API_URL || "https://api.inngest.com",
+});
